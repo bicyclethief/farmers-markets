@@ -2,15 +2,15 @@ class CreateTables < ActiveRecord::Migration
   def change
     create_table :markets do |t|
       t.string  :borough, null: false
-      t.string  :name, null: false
+      t.string  :market_name, null: false
       t.string  :street_address, null: false
-      t.string  :days, null: false
+      t.string  :day_s, null: false
       t.string  :hours, null: false
       t.integer :distribute_health_bucks, null: false
       t.integer :accepts_health_bucks, null: false
       t.integer :ebt, null: false
       t.integer :stellar, null: false
-      t.integer :geodata_id, null: false
+      t.integer :geodata_id
 
       t.timestamps null: false
     end
