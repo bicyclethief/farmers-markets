@@ -22,25 +22,12 @@ class MarketImporter
   end
 
   def create_markets(data)
-    markets = data.map do |market_data|
-      Market.new(market_data)
+    data.map do |market_data|
+      Market.create(market_data)
     end
-
-    p markets
   end
-
 
 end
 
-# https://data.cityofnewyork.us/resource/b7kx-qikm.json
-
-
-# t.string  :borough, null: false
-#      t.string  :name, null: false
-#      t.string  :street_address, null: false
-#      t.string  :days, null: false
-#      t.string  :hours, null: false
-#      t.integer :distribute_health_bucks, null: false
-#      t.integer :accepts_health_bucks, null: false
-#      t.integer :ebt, null: false
-#      t.integer :stellar, null: false
+markets = MarketImporter.new("https://data.cityofnewyork.us/resource/b7kx-qikm.json")
+markets.import
