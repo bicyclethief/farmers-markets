@@ -4,6 +4,8 @@ require "rspec"
 require "rake"
 require "sqlite3"
 require "pathname"
+require 'openssl'
+require 'geokit'
 
 
 # Identify the root directory for the application

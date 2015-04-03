@@ -1,19 +1,13 @@
-require 'openssl'
-require 'geokit'
-
 class Market < ActiveRecord::Base
   belongs_to :geodata
 
   # TODO: validate data
 
-  def nearest_market(zipcode, num)
+  def Market.nearest_market(zipcode, num)
     distance_markets = {}
-
     user_geodata = Geokit::Geocoders::GoogleGeocoder.geocode(zipcode)
     Market.all.each do |market|
-      city_state = "#{market.borough, market.state_code}"
-      full_address = "#{market.street_address} #{city_state}"
-      market_geodata = Geokit::Geocoders::GoogleGeocoder.geocode(full_address)
+      market_geodata = Geokit::Geocoders::GoogleGeocoder.geocode("#{market.street_address} #{market.borough}, NY")
       distance = user_geodata.distance_to(market_geodata)
       distance_markets[distance] = market
     end
@@ -26,3 +20,4 @@ class Market < ActiveRecord::Base
   end
 
 end
+

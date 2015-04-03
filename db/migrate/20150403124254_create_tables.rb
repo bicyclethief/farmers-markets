@@ -15,7 +15,7 @@ class CreateTables < ActiveRecord::Migration
       t.timestamps null: false
     end
 
-    create_table :geodatas do |t|
+    create_table :geodata do |t|
       t.string    :street_address, null: false
       t.string    :city, null: false
       t.string    :state_code, null: false
