@@ -1,4 +1,4 @@
-# Requre gems and Ruby libraries
+# Require gems and Ruby libraries
 require "active_record"
 require "rspec"
 require "rake"
@@ -27,7 +27,7 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 # Configure the database
 database_config = { :adapter  =>  "sqlite3",
-                    :database => "#{APP_ROOT}/db/dogs.sqlite3" }
+                    :database => "#{APP_ROOT}/db/markets.sqlite3" }
 
 ActiveRecord::Base.establish_connection(database_config)
 
