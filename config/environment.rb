@@ -1,4 +1,4 @@
-# Requre gems and Ruby libraries
+# Require gems and Ruby libraries
 require "active_record"
 require "rspec"
 require "rake"

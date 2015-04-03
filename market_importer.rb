@@ -9,6 +9,8 @@ class MarketImporter
     @url = url
   end
 
+  public
+
   def import
     create_markets(parse)
   end
@@ -19,6 +21,7 @@ class MarketImporter
     JSON.parse(open("#{@url}").read)
   end
 
+  # TODO: create geodata objects
   def create_markets(data)
     data.map do |market_data|
       market = Market.create(market_data)
