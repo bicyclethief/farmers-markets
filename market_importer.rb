@@ -1,6 +1,4 @@
-#TODO: is this needed?
-require_relative "app/models/market.rb"
-
+require_relative 'config/environment.rb'
 require "json"
 require "open-uri"
 
@@ -23,7 +21,7 @@ class MarketImporter
 
   def create_markets(data)
     data.map do |market_data|
-      Market.create(market_data)
+      market = Market.create(market_data)
     end
   end
 
