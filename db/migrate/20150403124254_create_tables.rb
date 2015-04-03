@@ -10,7 +10,7 @@ class CreateTables < ActiveRecord::Migration
       t.integer :accepts_health_bucks, null: false
       t.integer :ebt, null: false
       t.integer :stellar, null: false
-      t.integer :geodata_id, null: false
+      t.integer :geodata_id
 
       t.timestamps null: false
     end
