@@ -10,12 +10,12 @@ class CreateTables < ActiveRecord::Migration
       t.integer :accepts_health_bucks, null: false
       t.integer :ebt, null: false
       t.integer :stellar, null: false
+      t.integer :geodata_id, null: false
 
       t.timestamps null: false
     end
 
-    create_table :geodata do |t|
-      t.integer   :market_id, null: false
+    create_table :geodatas do |t|
       t.string    :street_address, null: false
       t.string    :city, null: false
       t.string    :state_code, null: false
