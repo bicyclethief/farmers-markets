@@ -13,12 +13,8 @@
 Note: seeding may take a few minutes to fetch and process NYC data
 
 ## Web App
-```
-ruby web.rb
-```
+`ruby web.rb` to start Sinatra webserver
 Visit [http://localhost:4567/](http://localhost:4567/)
 
 ## Commandline App 
-```
-ruby markets.rb [zipcode]
-```
+`ruby markets.rb [zipcode]`
