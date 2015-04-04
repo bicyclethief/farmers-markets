@@ -8,7 +8,7 @@
 3. rake db:drop
 4. rake db:create
 5. rake db:migrate
-6. rake db:seed
+6. rake db:seed  (this step will take a few minutes to fetch NYC data)
 
 ## Web App
 ```
@@ -18,5 +18,5 @@ Visit [http://localhost:4567/](http://localhost:4567/)
 
 ## Commandline App 
 ```
-Usage: ruby markets.rb [zipcode]
+ruby markets.rb [zipcode]
 ```
