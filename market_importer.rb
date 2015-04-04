@@ -35,7 +35,7 @@ class MarketImporter
       geodata.save
       market.geodata_id = geodata.id
       market.save
-      sleep(5)  # to prevent over query limit rejection by Google
+      sleep(1)  # to prevent over query limit rejection by Google
     end
   end
 
