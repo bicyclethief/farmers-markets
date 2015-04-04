@@ -1,0 +1,34 @@
+<%
+  def format_distance(distance)
+    sprintf("%0.2f", distance)
+  end
+%>
+<h2><%= @num_markets %> Farmers Markets closest to <%= @zipcode %></h2> 
+<table>
+<% @distance_markets.each do |distance_market|
+     distance = distance_market[0]
+     market = distance_market[1]
+%>
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td><h3><%= "#{market.market_name}" %></h3></td>
+          </tr>
+          <tr>
+            <td><%= "#{format_distance(distance)} miles away" %></td>
+          </tr>
+          <tr>
+            <td><%= market.street_address %></td>
+          </tr>
+          <tr>
+            <td><%= "#{market.borough}, #{market.geodata.state_code} #{market.geodata.zip}" %></td>
+          </tr>
+          <tr>
+            <td><%= "Open: #{market.day_s} #{market.hours}" %></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  <% end %>
+</table>
