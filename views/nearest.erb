@@ -4,6 +4,7 @@
   end
 %>
 <h2><%= @num_markets %> Farmers Markets closest to <%= @zipcode %></h2> 
+<hr>
 <table>
 <% @distance_markets.each do |distance_market|
      distance = distance_market[0]

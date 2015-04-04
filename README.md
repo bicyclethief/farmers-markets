@@ -17,5 +17,9 @@ start Sinatra webserver: `ruby web.rb`
 
 Visit [http://localhost:4567/](http://localhost:4567/)
 
+![form screenshot](url "Logo Title Text 1")
+
+![result screenshot](url "Logo Title Text 1")
+
 ### Commandline App 
 `ruby markets.rb [zipcode]`
