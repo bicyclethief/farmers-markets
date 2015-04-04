@@ -17,11 +17,5 @@ start Sinatra webserver: `ruby web.rb`
 
 Visit [http://localhost:4567/](http://localhost:4567/)
 
-![form
-screenshot](https://github.com/bicyclethief/farmers-markets/blob/master/images/form.png "Form page")
-
-![result
-screenshot](https://github.com/bicyclethief/farmers-markets/blob/master/images/nearest.png "Results page")
-
 ### Commandline App 
 `ruby markets.rb [zipcode]`
