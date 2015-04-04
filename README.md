@@ -1,7 +1,7 @@
 
 # Nearest NYC Farmer's Markets
 
-## Setup
+### Setup
 
 1. git clone repo
 2. `bundle install`
@@ -12,9 +12,10 @@
 
 Note: seeding may take a few minutes to fetch and process NYC data
 
-## Web App
-`ruby web.rb` to start Sinatra webserver
+### Web App
+start Sinatra webserver: `ruby web.rb`
+
 Visit [http://localhost:4567/](http://localhost:4567/)
 
-## Commandline App 
+### Commandline App 
 `ruby markets.rb [zipcode]`
