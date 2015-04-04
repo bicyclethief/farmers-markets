@@ -7,19 +7,24 @@ class Market < ActiveRecord::Base
     "#{street_address} #{borough}, NY"
   end
 
-  def Market.nearest_market(zipcode, num)
+  def self.nearest_market(zipcode, num)
     distance_markets = {}
     user_geodata = Geokit::Geocoders::GoogleGeocoder.geocode(zipcode)
+
     Market.all.each do |market|
-      market_geodata = Geokit::Geocoders::GoogleGeocoder.geocode("#{market.street_address} #{market.borough}, NY")
-      distance = user_geodata.distance_to(market_geodata)
-      distance_markets[distance] = market
+      market_geodata = market.geodata
+      distance = GeoDistance::Haversine.geo_distance(user_geodata.lat.to_f,
+                                                     user_geodata.lng.to_f,
+                                                     market_geodata.lat.to_f,
+                                                     market_geodata.lng.to_f)
+      distance_markets[distance.miles] = market
     end
 
     closest_distances = distance_markets.keys.sort.first(num)
 
-    closest_distances.map do |key|
-      distance_markets[key]
+    closest_distances.map do |distance|
+      market = distance_markets[distance]
+      [distance, market]
     end
   end
 

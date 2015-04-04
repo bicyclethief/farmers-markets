@@ -6,6 +6,7 @@ require "sqlite3"
 require "pathname"
 require 'openssl'
 require 'geokit'
+require 'geo-distance'
 
 
 # Identify the root directory for the application
