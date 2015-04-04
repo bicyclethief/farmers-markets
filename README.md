@@ -1,6 +1,9 @@
 
 # Nearest NYC Farmer's Markets
 
+(based on [NYC
+OpenData](https://data.cityofnewyork.us/Business/2012-NYC-Farmers-Market-List/b7kx-qikm))
+
 ### Setup
 
 1. git clone repo
