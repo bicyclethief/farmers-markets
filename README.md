@@ -1,7 +1,7 @@
 
 # Nearest NYC Farmer's Markets
 
-(based on [NYC
+(based on data from [NYC
 OpenData](https://data.cityofnewyork.us/Business/2012-NYC-Farmers-Market-List/b7kx-qikm))
 
 ### Setup
