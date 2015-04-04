@@ -2,6 +2,10 @@ class Market < ActiveRecord::Base
   belongs_to :geodata
 
   # TODO: validate data
+  
+  def full_address
+    "#{street_address} #{borough}, NY"
+  end
 
   def Market.nearest_market(zipcode, num)
     distance_markets = {}

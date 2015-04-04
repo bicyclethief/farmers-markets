@@ -16,19 +16,19 @@ class CreateTables < ActiveRecord::Migration
     end
 
     create_table :geodata do |t|
-      t.string    :street_address, null: false
-      t.string    :city, null: false
-      t.string    :state_code, null: false
-      t.string    :state_name, null: false
-      t.string    :zip, null: false
-      t.string    :country_code, null: false
-      t.string    :province, null: false
-      t.string    :full_address, null: false
+      t.string    :street_address
+      t.string    :city
+      t.string    :state_code
+      t.string    :state_name
+      t.string    :zip
+      t.string    :country_code
+      t.string    :province
+      t.string    :full_address
       t.decimal   :lat, null: false
       t.decimal   :lng, null: false
-      t.string    :neighborhood, null: false
-      t.string    :district, null: false
-      t.string    :country, null: false
+      t.string    :neighborhood
+      t.string    :district
+      t.string    :country
 
       t.timestamps null: false
     end
